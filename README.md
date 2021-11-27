@@ -7,7 +7,7 @@ https://github.com/denoland/deno/releases
 
 ## 開発環境
 
-1. VSCode の拡張機能をインストールする
+1. VSCode の拡張機能をインストールする  
     https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno
 2. 拡張機能の設定で deno.path を設定する
 3. Cmd + Shift + P → `Deno:Initialize Workspace Configuration command` を実行する
