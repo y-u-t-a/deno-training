@@ -4,8 +4,8 @@ import { greet } from './api.ts'
 export type EntryFunction = (request: Request) => Response
 
 type Route = {
-  path: string
-  fun: EntryFunction
+  readonly path: string
+  readonly fun: EntryFunction
 }
 
 const routes:Route[] = [
