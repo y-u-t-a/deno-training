@@ -8,12 +8,12 @@ type Route = {
 
 const routes:Route[] = [
   {
-    path: "/greet",
-    fun: greet
-  },
-  {
     path: "/",
     fun: () => new Response("hello")
+  },
+  {
+    path: "/greet",
+    fun: greet
   },
 ]
 
