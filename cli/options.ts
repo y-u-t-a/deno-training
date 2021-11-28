@@ -5,21 +5,21 @@ import { parse } from 'https://deno.land/std@0.116.0/flags/mod.ts'
  * https://dev.mysql.com/doc/refman/5.6/ja/mysql-command-options.html
  */
 type ValidOptions = {
-  user?: string
-  u?: string
-  host?: string
-  h?: string
-  database?: string
-  D?: string
+  readonly user?: string
+  readonly u?: string
+  readonly host?: string
+  readonly h?: string
+  readonly database?: string
+  readonly D?: string
 }
 
 const defaultOption: Required<ValidOptions> = {
-  user: "root" as const,
-  u: "root" as const,
-  host: "localhost" as const,
-  h: "localhost" as const,
-  database: "" as const,
-  D: "" as const,
+  user: "root",
+  u: "root",
+  host: "localhost",
+  h: "localhost",
+  database: "",
+  D: "",
 }
 
 export class Options {
