@@ -11,6 +11,10 @@ const routes:Route[] = [
     path: "/greet",
     fun: greet
   },
+  {
+    path: "/",
+    fun: () => new Response("hello")
+  },
 ]
 
 export function routing(requestUrl: string): EntryFunction | undefined {
