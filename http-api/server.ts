@@ -8,7 +8,8 @@ function handler(request: Request) {
   if (fun) {
     response = fun(request)
   } else {
-    response = new Response(JSON.stringify({
+    response = new Response(
+      JSON.stringify({
         "message" : "Not Found",
       }),
       {
