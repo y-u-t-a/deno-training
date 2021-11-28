@@ -1,5 +1,7 @@
-import { EntryFunction } from './interface/index.ts'
 import { greet } from './api.ts'
+
+/** Request を受け取って Response を返却する関数の型 */
+export type EntryFunction = (request: Request) => Response
 
 type Route = {
   path: string

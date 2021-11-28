@@ -1,6 +1,4 @@
-import { EntryFunction } from '../interface/index.ts'
-
-export const greet: EntryFunction = (request) => {
+export function greet (request: Request) {
   const url = new URL(request.url)
   const name = url.searchParams.get('name') || 'World'
   const responseBody = `Hello, ${name}`
