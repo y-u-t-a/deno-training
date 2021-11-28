@@ -5,8 +5,10 @@ function main() {
   console.log(options)
 }
 
-try {
-  main()
-} catch (error) {
-  console.log(error)
+if (import.meta.main) {
+  try {
+    main()
+  } catch (error) {
+    console.log(error)
+  }
 }
