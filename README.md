@@ -25,3 +25,11 @@ deno run [オプション] <ファイルパス>
 パーミッションオプション一覧  
 https://deno.land/manual@v1.11.3/getting_started/permissions
 
+## リンク集
+
+- ビルトイン関数
+    - https://doc.deno.land/builtin/stable
+- 標準ライブラリ
+    - https://deno.land/std
+- サードパーティライブラリ
+    - https://deno.land/x
