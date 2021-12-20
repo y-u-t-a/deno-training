@@ -12,15 +12,19 @@ const notFound = new Response(
   }
 )
 
-for await (const conn of Deno.listen({ port: port })) {
-  (async () => {
-    for await (const { respondWith, request } of Deno.serveHttp(conn)) {
-      const fun = routing(request.url)
-      if (fun) {
-        respondWith(fun(request))
-      } else {
-        respondWith(notFound)
-      }
+async function handleConn(conn: Deno.Conn) {
+  const httpConn = Deno.serveHttp(conn);
+  for await (const e of httpConn) {
+    const request = e.request
+    const fun = routing(request.url)
+    if (fun) {
+      e.respondWith(fun(request))
+    } else {
+      e.respondWith(notFound)
     }
-  })()
+  }
+}
+
+for await (const conn of Deno.listen({ port: port })) {
+  handleConn(conn)
 }
