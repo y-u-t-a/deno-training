@@ -1,7 +1,7 @@
 import { routing } from './router.ts'
 
 const port = 8080
-console.log(`HTTP webserver running. Access it at: http://localhost:${port}/`)
+console.log(`HTTP webserver running. Access it at: http://localhost:${port}`)
 
 const notFound = new Response(
   JSON.stringify({
