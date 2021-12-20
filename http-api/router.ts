@@ -1,7 +1,7 @@
 import { greet } from './api.ts'
 
 /** Request を受け取って Response を返却する関数の型 */
-export type EntryFunction = (request: Request) => Response
+type EntryFunction = (request: Request) => Response
 
 type Route = {
   readonly path: string
